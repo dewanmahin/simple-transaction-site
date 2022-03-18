@@ -8,4 +8,5 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     }else{
         alert('Enter your correct information.')
     }
+    
 })
