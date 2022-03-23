@@ -8,8 +8,26 @@ function getInputValue(inputId){
     return inputAmount;
 }
 
+//! updateTotal() use for update balance and transactions details
+function updateTotal(totalId, amount){
+    const total = document.getElementById(totalId);
+    const totalText = total.innerText;
+    const totalAmount = parseFloat(totalText);
+
+    // Total all amount
+    total.innerText = totalAmount + amount;
+}
+
 //! Deposit button handler
 document.getElementById('deposit-btn').addEventListener('click', function(){
     const depositAmount = getInputValue("deposit-input")
-    console.log(depositAmount);
+
+    updateTotal('deposit-total', depositAmount)
+})
+
+//! Withdraw button handler
+document.getElementById('withdraw-btn').addEventListener('click', function(){
+    const withdrawAmount = getInputValue('withdraw-input');
+
+    updateTotal('withdraw-total', withdrawAmount)
 })
