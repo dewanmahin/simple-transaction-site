@@ -1,5 +1,5 @@
-#Login info
-Email
+# Login info
+**Email**
 > user@bank.com
-Password
+**Password**
 > 1234
